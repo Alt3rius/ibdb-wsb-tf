@@ -6,7 +6,7 @@ resource "digitalocean_kubernetes_cluster" "ibdb" {
   
   node_pool {
     name       = "main-pool"
-    size       = "s-2vcpu-4gb"
+    size       = "s-4vcpu-8gb"
     auto_scale = true
     min_nodes  = 1
     max_nodes  = 5
