@@ -1,11 +1,12 @@
 resource "digitalocean_kubernetes_cluster" "ibdb" {
   name    = "ibdb"
   region  = "fra1"
-  version = "1.20.2-do.0"
-
+  version = "1.21.11-do.1"
+  ha = false
+  
   node_pool {
     name       = "main-pool"
-    size       = "s-2vcpu-2gb"
+    size       = "s-2vcpu-4gb"
     auto_scale = true
     min_nodes  = 1
     max_nodes  = 5
